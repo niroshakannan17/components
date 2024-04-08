@@ -1,0 +1,16 @@
+<h3> List Components data</h3>
+
+<div *ngIf="studentList.length>0; then dataList; else noData">
+
+</div>
+
+<ng-template #dataList>
+    <ul>
+        <li *ngFor="let item of studentList">{{item}}</li>
+    </ul>
+</ng-template>
+
+<ng-template #noData>
+    <p>No data</p>
+</ng-template>
+
