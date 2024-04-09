@@ -1,3 +1,5 @@
+<app-form (addedStudent)="updatedStudentData($event)"></app-form>
+
 <h3> List Components data</h3>
 
 <div *ngIf="studentList.length>0; then dataList; else noData">

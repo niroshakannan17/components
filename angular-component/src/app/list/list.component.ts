@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-list',
@@ -7,5 +7,10 @@ import { Input } from '@angular/core';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-  @Input('studentInput') studentList:string[] = []
+  studentList:string[] = []
+
+  updatedStudentData(studentArr:string[])
+  {
+    this.studentList = studentArr;
+  }
 }
